@@ -10,9 +10,14 @@ import UIKit
 class CountryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var countryNameLabel: UILabel!
+   
+    
+    @IBOutlet weak var countryFlagImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        countryFlagImage.layer.borderWidth = 1.5
+        countryFlagImage.layer.cornerRadius = countryFlagImage.frame.width / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
